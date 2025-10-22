@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página com Imagem de Fundo Responsiva</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      background-image: url('image/petro.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .mensagem {
+      background-color: rgba(0, 0, 0, 0.55);
+      color: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      max-width: 90%;
+      width: 500px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .mensagem h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    /* Estilo do link */
+    .mensagem a {
+      color: #4fc3f7; /* azul claro */
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .mensagem a:hover {
+      color: #81d4fa; /* cor mais clara ao passar o mouse */
+      text-decoration: underline;
+    }
+
+    .mensagem p {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 600px) {
+      .mensagem h1 {
+        font-size: 1.5rem;
+      }
+      .mensagem p {
+        font-size: 1rem;
+      }
+    }
+	
+	
+	
+  </style>
+</head>
+<body>
+  <div class="mensagem">
+    <h1><a href="https://www.google.com" target="_blank">Bem-vindo à Minha Página!</a></h1>
+    <p>Esta mensagem é totalmente responsiva e se ajusta a qualquer tela.</p>
+  </div>
+</body>
+</html>
