@@ -14,65 +14,69 @@
     body {
       font-family: 'Poppins', sans-serif;
       height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-
       background-image: url('image/petro.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      position: relative; /* necessário para o posicionamento absoluto funcionar dentro do body */
     }
 
-    .mensagem {
-      background-color: rgba(0, 0, 0, 0.55);
+    /* Estilo base para todos os títulos */
+    .title-1, .title-2, .title-3, .title-4, .title-5, .title-6 {
+      position: absolute;
       color: white;
-      padding: 30px 40px;
-      border-radius: 15px;
-      max-width: 90%;
-      width: 500px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.55);
+      padding: 10px 150px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      max-width: 370px;
+      text-align: center;
     }
 
-    .mensagem h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+    /* Agora definimos as posições individuais */
+    .title-1 {
+      top: 350px;
+      left: 80px;
     }
 
-    /* Estilo do link */
-    .mensagem a {
-      color: #4fc3f7; /* azul claro */
-      text-decoration: none;
-      transition: color 0.3s;
+    .title-2 {
+      top: 20px;
+      right: 20px;
     }
 
-    .mensagem a:hover {
-      color: #81d4fa; /* cor mais clara ao passar o mouse */
-      text-decoration: underline;
+    .title-3 {
+      bottom: 20px;
+      left: 80px;
     }
 
-    .mensagem p {
-      font-size: 1.1rem;
+    .title-4 {
+      bottom: 20px;
+      right: 20px;
     }
 
-    @media (max-width: 600px) {
-      .mensagem h1 {
-        font-size: 1.5rem;
-      }
-      .mensagem p {
-        font-size: 1rem;
-      }
+    .title-5 {
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* centraliza no meio */
     }
-	
-	
-	
+
+    .title-6 {
+      bottom: 11%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+
   </style>
 </head>
 <body>
-  <div class="mensagem">
-    <h1><a href="https://www.google.com" target="_blank">Bem-vindo à Minha Página!</a></h1>
-    <p>Esta mensagem é totalmente responsiva e se ajusta a qualquer tela.</p>
-  </div>
+
+  <a href="https://petrobras.com.br/"><div class="title-1"></div></a>
+  <!--<div class="title-2">Canto superior direito</div>-->
+  <a href="https://petrobras.com.br/inovacao-e-tecnologia/centro-de-pesquisa"><div class="title-3">Canto inferior esquerdo</div></a>
+  <!--<div class="title-4">Canto inferior direito</div>-->
+  <a href="https://petrobras.com.br/sustentabilidade/patrocinios"><div class="title-5">Centro da página</div></a>
+  <a href="https://petrobras.com.br/pre-sal"><div class="title-6">Centro inferior</div></a>
+
 </body>
 </html>
