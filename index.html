@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página com Imagem de Fundo Responsiva</title>
+  <title>Página Centralizada</title>
   <style>
     * {
       margin: 0;
@@ -12,149 +13,95 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      /* centraliza horizontalmente */
+      align-items: center;
+      /* centraliza verticalmente */
       height: 100vh;
-      background-image: url('image/petro.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative; /* necessário para o posicionamento absoluto funcionar dentro do body */
-    }
-
-    /* Estilo base para todos os títulos */
-    .title-1, .title-2, .title-3, .title-4, .title-5, .title-6 {
-      position: absolute;
-      padding: 40px 185px;
-      border-radius: 10px;
-      max-width: 400px;
- 
-    }
-
-    /* Agora definimos as posições individuais */
-    .title-1 {
-      top: 350px;
-      left: 80px;
-    }
-
-    .title-2 {
-      top: 20px;
-      right: 20px;
-    }
-
-    .title-3 {
-      bottom: 28px;
-      left: 80px;
-    }
-
-    .title-4 {
-      bottom: 20px;
-      right: 20px;
-    }
-
-    .title-5 {
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%); /* centraliza no meio */
-    }
-
-    .title-6 {
-      bottom: 11%;
-      left: 50%;
-      transform: translate(-50%, 50%);
-    }
-
-  </style>
-</head>
-<body>
-
-  <a href="https://petrobras.com.br/"><div class="title-1"></div></a>
-  <!--<div class="title-2">Canto superior direito</div>-->
-  <a href="https://petrobras.com.br/inovacao-e-tecnologia/centro-de-pesquisa"><div class="title-3"></div></a>
-  <!--<div class="title-4">Canto inferior direito</div>-->
-  <a href="https://petrobras.com.br/sustentabilidade/patrocinios"><div class="title-5"></div></a>
-  <a href="https://petrobras.com.br/pre-sal"><div class="title-6"></div></a>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página com Imagem de Fundo Responsiva</title>
-  <style>
-    * {
+      /* ocupa toda a altura da tela */
       margin: 0;
+      /* remove margens padrão do navegador */
       padding: 0;
-      box-sizing: border-box;
+      /* remove espaçamento interno */
     }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      height: 100vh;
+    .container {
+      width: 680px;
+      height: 625px;
       background-image: url('image/petro.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      position: relative; /* necessário para o posicionamento absoluto funcionar dentro do body */
+      overflow: hidden;
+      position: relative;
+      border: none;
+      /* remove qualquer borda */
+      box-shadow: none;
+      /* remove sombra */
+      margin: 0;
+      /* sem margens extras */
+      padding: 0;
     }
 
-    /* Estilo base para todos os títulos */
-    .title-1, .title-2, .title-3, .title-4, .title-5, .title-6 {
-      position: absolute;
-      padding: 40px 185px;
-      border-radius: 10px;
-      max-width: 400px;
- 
-    }
-
-    /* Agora definimos as posições individuais */
     .title-1 {
-      top: 350px;
-      left: 80px;
-      background: #5d5d5d;
+      width: 200px;
+      height: 45px;
+      position: absolute;
+      /* posicionamento absoluto */
+      top: 330px;
+      /* ajuste conforme necessário */
+      left: 25px;
+      /* ajuste conforme necessário */
+      z-index: 999;
     }
 
     .title-2 {
-      top: 20px;
-      right: 20px;
+      width: 200px;
+      height: 45px;
+      position: absolute;
+      /* posicionamento absoluto */
+      top: 418px;
+      /* ajuste conforme necessário */
+      left: 25px;
+      /* ajuste conforme necessário */
+      z-index: 999;
     }
 
     .title-3 {
-      bottom: 28px;
-      left: 80px;
+      width: 200px;
+      height: 45px;
+
+      position: absolute;
+      /* posicionamento absoluto */
+      top: 330px;
+      /* ajuste conforme necessário */
+      left: 250px;
+      /* ajuste conforme necessário */
+      z-index: 999;
     }
 
     .title-4 {
-      bottom: 20px;
-      right: 20px;
+      width: 200px;
+      height: 45px;
+      position: absolute;
+      /* posicionamento absoluto */
+      top: 418px;
+      /* ajuste conforme necessário */
+      left: 250px;
+      /* ajuste conforme necessário */
+      z-index: 999;
     }
-
-    .title-5 {
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%); /* centraliza no meio */
-    }
-
-    .title-6 {
-      bottom: 11%;
-      left: 50%;
-      transform: translate(-50%, 50%);
-    }
-
   </style>
 </head>
+
 <body>
-
-  <div class="title-1" onclick="window.open('https://petrobras.com.br/inovacao-e-tecnologia/centro-de-pesquisa', '_blank')"></div>
-  <!--<div class="title-2">Canto superior direito</div>-->
-<div class="title-3" onclick="window.open('https://www.google.com/', '_blank')"></div>
-  <!--<div class="title-4">Canto inferior direito</div>-->
-  <a href="https://petrobras.com.br/sustentabilidade/patrocinios" ><div class="title-5"></div></a>
-  <a href="https://petrobras.com.br/pre-sal" ><div class="title-6"></div></a>
-
+  <div class="container">
+    <div class="title-1"
+      onclick="window.open('https://petrobras.com.br/inovacao-e-tecnologia/centro-de-pesquisa', '_blank')"></div>
+    <div class="title-2" onclick="window.open('https://petrobras.com.br/quem-somos/perfil', '_blank')"></div>
+    <div class="title-3" onclick="window.open('https://petrobras.com.br/sustentabilidade/patrocinios', '_blank')"></div>
+    <div class="title-4" onclick="window.open('https://petrobras.com.br/pre-sal', '_blank')"></div>
+  </div>
 </body>
 </html>
-
-
-
